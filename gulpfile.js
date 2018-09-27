@@ -92,7 +92,7 @@ gulp.task("sass", function() {
 });
 
 gulp.task("html", function() {
-  return gulp.src(["index.html"]).pipe(gulpCopy(DESTINATION_DIR));
+  return gulp.src(["index.html", "sw.js"]).pipe(gulpCopy(DESTINATION_DIR));
 });
 
 gulp.task("default", ["bundle", "serve", "sass", "html", "watch"]);
